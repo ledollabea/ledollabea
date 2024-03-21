@@ -13,11 +13,13 @@
   --background-gray-1: rgba(170, 170, 170, 1);
   --background-gray-2: rgba(34, 34, 34, 1);
   --background-gray-3: rgba(25, 25, 25, 1);
-  --background-gray-4: rgba(19, 19, 19, 1);
+  --background-gray-4: rgb(22, 22, 22, 1);
+  --background-gray-5: rgba(19, 19, 19, 1);
 }
 
 body,
 header,
+main,
 .search,
 .options,
 .options-center,
@@ -31,6 +33,10 @@ body {
   flex-direction: column;
   color: var(--background-gray-1);
   font-family: "Courier New", Courier, monospace;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 /*HEADER*/
@@ -56,7 +62,7 @@ header {
 .search {
   align-items: center;
   justify-content: center;
-  border: 0.1em solid rgba(170, 170, 170, 1);
+  border: 0.1em solid var(--background-gray-1);
   padding: 0.2em 0.4em;
   border-radius: 0.4em;
 }
@@ -78,10 +84,11 @@ header {
 .vertical-nav {
   width: 3.5em;
   height: 100%;
-  background-color: var(--background-gray-4);
+  background-color: var(--background-gray-5);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
 }
 
 ul {
@@ -100,6 +107,21 @@ li {
 /*MAIN*/
 main {
   flex-grow: 1;
+  background-color: var(--background-gray-2);
+  position: relative;
+}
+
+.sidenav {
+  height: 100%;
+  background-color: var(--background-gray-4);
+  width: 0;
+  margin-left: 3.5em;
+  border: 0.06em solid var(--background-gray-5);
+}
+
+#main {
+  height: 100%;
+  width: 100%;
   background-color: var(--background-gray-2);
 }
 

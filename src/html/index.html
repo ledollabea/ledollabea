@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bea Dev</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/nav.js"></script>
     <link
       rel="shortcut icon"
       href="../assets/logo-portfolio.ico"
@@ -42,15 +43,27 @@
       </section>
     </header>
     <main>
-      <nav class="vertical-nav">
+      <section class="vertical-nav">
         <ul>
-          <li><span class="material-symbols-outlined"> file_copy </span></li>
-          <li><span class="material-symbols-outlined"> search </span></li>
-          <li><span class="material-symbols-outlined"> stacks </span></li>
+          <a href="#"><li  onclick="openNav()">
+            <span class="material-symbols-outlined pointer">
+              file_copy
+            </span>
+          </li></a>
+          <a href="#"><li>
+            <span class="material-symbols-outlined pointer" onclick="openNav()">
+              search
+            </span>
+          </li></a>
           <li>
+            <a href="#"><span class="material-symbols-outlined pointer" onclick="openNav()">
+              stacks
+            </span>
+          </li></a>
+          <a href="#"><li>
             <img class="icons" src="../assets/git-fork.png" alt="Git fork" />
-          </li>
-          <li><span class="material-symbols-outlined"> open_in_new </span></li>
+          </li></a>
+          <a href="#"><li><span class="material-symbols-outlined"> open_in_new </span></li></a>
         </ul>
         <ul>
           <li>
@@ -58,7 +71,17 @@
           </li>
           <li><span class="material-symbols-outlined"> settings </span></li>
         </ul>
-      </nav>
+      </section>
+      <section id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <p>coisas que aparecerão baseadas no item que for clicado pq JS</p>
+      </section>
+      <section id="main">
+        <h2>Sessão que vai ser empurrada pro lado</h2>
+        <p>Isso tem que ser empurrado pra direita sem estragar nada</p>
+      </section>
     </main>
     <footer></footer>
   </body>
